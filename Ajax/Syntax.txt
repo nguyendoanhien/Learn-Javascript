@@ -1,0 +1,11 @@
+     $.ajax({
+            type: "POST",
+            url: "Default.aspx/GetProducts",
+            data: JSON.stringify({ setPage: null, cat_id: null, brand_id: null }),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (data) {
+                $("#get_product").html(data.d);
+
+            }
+        });
